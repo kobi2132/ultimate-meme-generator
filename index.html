@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Ultimate Meme Generator</title>
+</head>
+
+<body class="main-layout" onload="init()">
+    <div class="main-screen" onclick="toggleMenu()"></div>
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="logo"><img src="./img/logo/logo.png" alt="" srcset=""></div>
+            <ul class="main-nav">
+                <li><a href="#" onclick="moveToGallery()">Gallery</a></li>
+                <li><a href="#" onclick="active(this)">My MEMES</a></li>
+                <li><a href="#" onclick="active(this)">About</a></li>
+            </ul>
+            <button class="btn-menu" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+    <main class="main-content">
+        <!-- <section class="search-container"hidden>
+            <label for="search-input">Search</label>
+            <input type="text" name="search-input" id="search-input">
+            <label for="tags">Filter</label>
+            <input list="tags">
+            <datalist id="tags">
+                <option value="funny">
+                <option value="animal">
+                <option value="men">
+                <option value="women">
+                <option value="sad">
+            </datalist>
+        </section> -->
+        <section class="gallery-container"></section>
+    </main>
+
+    <section class="editor-content" hidden>
+        <div class="editor-container">
+            <div class="canvas-container">
+                <canvas id="my-canvas" height="450" width="450"></canvas>
+            </div>
+
+            <section class="editor">
+                <div class="text-input">
+                    <input class="txt-input" type="text" name="txt" id="txt" placeholder="Enter Your Text Here">
+                </div>
+                <div class="text-pos">
+                    <button class="move-up" onclick="onMoveUp()"></button>
+                    <button class="move-down" onclick="onMoveDown()"></button>
+                    <button class="add-new-line" onclick="onAddNewLine()"></button>
+                    <button class="select-line" onclick="onSelectLine()"></button>
+                    <button class="delete-line" onclick="onDeleteLine()"></button>
+                </div>
+                <div class="text-edit">
+                    <div class="font-1">
+                        <button class="increase-text" onclick="onIncreaseText()">A+</button>
+                        <button class="decrease-text" onclick="onDecreaseText()">A-</button>
+                        <button class="align-left" onclick="onAlignLeft()"></button>
+                        <button class="align-center" onclick="onAlignCenter()"></button>
+                        <button class="align-right" onclick="onAlignRight()"></button>
+                    </div>
+                    <div class="font-2">
+                        <label class="font-txt" for="font-select">Text Font</label>
+                        <select class="font-select" name="font-select" id="font-select" onchange="onSetFont(value)">
+                            <option value="impact">Impact</option>
+                            <option value="rubik">Rubik</option>
+                            <option value="verdana">Verdana</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            <option value="Courier New">Courier New</option>
+                            <option value="serif">serif</option>
+                            <option value="sans-serif">sans-serif</option>
+                        </select>
+                        <label class="fill-color-txt" for="select-fill-color">Text color</label>
+                        <input class="fill-color" type="color" name="select-fill-color" id="select-fill-color"
+                            onchange="onChangeFillColor(this.value)">
+                        <label class="border-color-txt" for="select-border-color">Border color</label>
+                        <input class="border-color" type="color" name="select-border-color" id="select-border-color"
+                            onchange="onChangeStrokeColor(this.value)">
+                    </div>
+                </div>
+                <div class="stiker-conainer">
+                    <div class="add-stiker">Add stiker section (coming soon...)</div>
+                </div>
+                <div class="share-container">
+                    <button class="share"></button>
+                    <button class="save"></button>
+                    <a href="#" onclick="onDownloadCanvas(this)" download="myphoto"><button
+                            class="download"></button></a>
+                </div>
+            </section>
+        </div>
+
+
+    </section>
+
+    <footer>
+        <div>
+            • MEME GENERATOR 2021 • © Jacob.LTD • meme-generator@jacob.org.il •
+        </div>
+    </footer>
+
+    <script src="js/editor.service.js"></script>
+    <script src="js/editor.controler.js"></script>
+    <script src="js/events.controler.js"></script>
+    <script src="js/main.controler.js"></script>
+</body>
+
+</html>
