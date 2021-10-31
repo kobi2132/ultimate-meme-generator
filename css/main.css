@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: 'fa';
-    src: url(./vendor/font-awesome/fonts/fontawesome-webfont.ttf);
+    src: url(./vendor/font-awesome/fonts/fa-solid-900.ttf);
 }
 
 
@@ -394,7 +394,7 @@ body.menu-open .main-screen {
     .main-nav {
         position: fixed;
         top: 0;
-        right: 0;
+        right: -60px;
         height: 100vh;
         flex-direction: column;
         background-color: rgba(255, 255, 255, .9);

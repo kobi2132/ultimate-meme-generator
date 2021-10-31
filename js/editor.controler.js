@@ -69,6 +69,7 @@ function onChangeStrokeColor(color) {
 
 function onDownloadCanvas(elLink) {
     clearFrame()
+    renderMeme()
     const data = gElCanvas.toDataURL();
     elLink.href = data;
     elLink.download = 'My-Canvas';

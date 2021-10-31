@@ -5,7 +5,6 @@ function addListeners() {
     addMouseListeners()
     addTouchListeners()
     addTextListeners()
-
 }
 
 function addTextListeners() {

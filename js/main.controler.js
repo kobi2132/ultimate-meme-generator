@@ -7,8 +7,7 @@ var gCtx;
 function init() {
     gElCanvas = document.querySelector('#my-canvas');
     gCtx = gElCanvas.getContext('2d');
-
-
+    
     renderGallery()
     addListeners()
     drawImgFromlocal()
