@@ -33,6 +33,7 @@ function renderCanvas() {
 
 function renderMeme() {
     var img = new Image()
+    // ----cancel array----
     img.src = gCurrImg[0].url
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
@@ -49,7 +50,7 @@ function onUpdateCurrImg(id) {
 }
 
 function drawImgFromlocal() {
-    getCurrImg(gMeme)
+    getCurrImg()
     var img = new Image()
     img.src = gCurrImg[0].url
     var ch = (img.height * gElCanvas.width) / img.width

@@ -253,10 +253,10 @@ var gImgs = [
     }
 ]
 
-function getCurrImg(gMeme) {
-    var imgIdx = gMeme.selectesImgId
-    gCurrImg = gImgs.filter(function (idx) {
-        return idx.id === imgIdx
+function getCurrImg() {
+    var imgId = gMeme.selectesImgId
+    gCurrImg = gImgs.filter(function (img) {
+        return img.id === imgId
     })
 }
 

@@ -390,11 +390,16 @@ body.menu-open .main-screen {
 @media (max-width: 740px) {
     .btn-menu {
         display: block;
+        margin-inline-end: 1.875rem;
+        font-size: 25px;
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+        cursor: pointer;
     }
     .main-nav {
         position: fixed;
         top: 0;
-        right: -60px;
+        right: 0;
         height: 100vh;
         flex-direction: column;
         background-color: rgba(255, 255, 255, .9);
@@ -402,6 +407,8 @@ body.menu-open .main-screen {
         transform: translateX(100%);
         border-inline-start: 1px solid #e0e0e0;
         transition: transform .6s, box-shadow .6s;
+        margin-inline-end: 0;
+
     }
 
     body.menu-open .main-nav {
@@ -409,16 +416,17 @@ body.menu-open .main-screen {
         box-shadow: -2px -2px 20px rgba(0, 0, 0, .25);
     }
 
-    .main-nav>*:not(:last-child) {
+    .main-nav>* {
         margin: 0;
     }
 
     .main-nav a {
         display: block;
-        margin-top: 30px;
+        margin-top: 15px;
         padding: 10px 16px;
         border-bottom: 1px solid #e0e0e0;
         transition: background .3s;
+        text-align: start;
     }
     .main-nav a:hover {
         background: #efefef;

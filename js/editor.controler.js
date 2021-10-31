@@ -20,7 +20,6 @@ function onMoveDown() {
 function onAddNewLine() {
     addNewLine()
     document.querySelector('#txt').value = ''
-
 }
 
 function onSelectLine() {
@@ -55,7 +54,7 @@ function onAlignRight() {
     alignRight()
 }
 
-function onSetFont(font){
+function onSetFont(font) {
     SetFont(font)
 }
 
@@ -69,8 +68,8 @@ function onChangeStrokeColor(color) {
 
 function onDownloadCanvas(elLink) {
     clearFrame()
-    renderMeme()
     const data = gElCanvas.toDataURL();
     elLink.href = data;
-    elLink.download = 'My-Canvas';
+    console.log(data);
+    elLink.download = 'My-Canvas'
 }
